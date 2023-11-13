@@ -14,16 +14,7 @@ public class Employer extends AbstractEntity {
     @Size(min =3,max = 100, message = "Location must be between 3 and 100 characters")
     private String location;
 
-    @OneToOne
-    @Valid
-    @NotNull
-    private Employer employer;
-
-    public Employer(String location) {
-        this.location = location;
-    }
-
-    public Employer() {};
+    public Employer() {}
 
     public String getLocation() {
         return location;
@@ -33,11 +24,4 @@ public class Employer extends AbstractEntity {
         this.location = location;
     }
 
-    public Employer getEmployer() {
-        return employer;
-    }
-
-    public void setEmployer(Employer employer) {
-        this.employer = employer;
-    }
 }

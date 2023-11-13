@@ -9,19 +9,11 @@ import jakarta.validation.constraints.Size;
 @Entity
 public class Skill extends AbstractEntity {
 
-    @Size(max = 500, message = "Desription too long!")
+    @Size(max = 500, message = "Description too long!")
     private String description;
 
-    @OneToOne
-    @Valid
-    @NotNull
-    private Skill skill;
 
-    public Skill(String description) {
-        this.description = description;
-    }
-
-    public Skill() {};
+    public Skill() {}
 
     public String getDescription() {
         return description;
@@ -31,11 +23,4 @@ public class Skill extends AbstractEntity {
         this.description = description;
     }
 
-    public Skill getSkill() {
-        return skill;
-    }
-
-    public void setSkill(Skill skill) {
-        this.skill = skill;
-    }
 }
