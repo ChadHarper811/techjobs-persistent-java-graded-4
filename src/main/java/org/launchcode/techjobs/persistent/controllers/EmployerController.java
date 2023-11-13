@@ -16,6 +16,7 @@ import java.util.Optional;
 public class EmployerController {
 
     @Autowired
+    @Valid
     private EmployerRepository employerRepository;
 
     @GetMapping("/")
