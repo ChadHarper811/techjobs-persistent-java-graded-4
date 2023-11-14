@@ -13,7 +13,7 @@ import java.util.List;
 public class Employer extends AbstractEntity {
 
     @OneToMany
-    @JoinColumn(name = "employer_id")
+    @JoinColumn(name = "employer_Id")
     private List<Job> jobs = new ArrayList<>();
 
     @NotBlank(message = "Location is required")
@@ -30,4 +30,11 @@ public class Employer extends AbstractEntity {
         this.location = location;
     }
 
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
+    }
 }
